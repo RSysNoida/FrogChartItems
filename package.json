@@ -1,0 +1,23 @@
+{
+  "name": "react-native-frog-stagelist",
+  "version": "1.0.0",
+  "description": "React Native Frog StageList",
+  "main": "build/StageList.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RSysNoida/MyTracker.git"
+  },
+  "keywords": [
+    "My",
+    "Tracker"
+  ],
+  "author": "Frog",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RSysNoida/MyTracker/issues"
+  },
+  "homepage": "https://github.com/RSysNoida/MyTracker#readme"
+}
