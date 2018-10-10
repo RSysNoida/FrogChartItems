@@ -1,8 +1,6 @@
 import React from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
 
-import globalStyles from '../../themes/global/styles/styles';
-
 class TrackerListItem extends React.Component {
 
     openObjectiveView = () => {
@@ -15,21 +13,21 @@ class TrackerListItem extends React.Component {
     render() {
       return (
         <TouchableOpacity onPress={() => this.openObjectiveView()}>
-            <View style={[globalStyles.listItemTrackerStyle, globalStyles.listThreeSidedBorderStyle]}>
+            <View style={[styles.listItemTrackerStyle, styles.listThreeSidedBorderStyle]}>
                 <View>
-                    <Text style={globalStyles.listItemTrackerTitleStyle}>
+                    <Text style={styles.listItemTrackerTitleStyle}>
                         { this.props.tracker.subject.name}{( this.props.tracker.group ? ' - '+ this.props.tracker.group.name : '' )}
                     </Text>
                     {
                         this.props.tracker.curriculum ?
-                        <Text style={globalStyles.listItemTrackerSubTitleStyle}>
+                        <Text style={styles.listItemTrackerSubTitleStyle}>
                             {this.props.tracker.curriculum.name}
                         </Text> : null
                     }
                 </View>
                     {
                         this.props.tracker.curriculum ?
-                        <Image source={require('../../assets/icons/ic_next_dark.png')} resizeMode='center' style={globalStyles.listClickIcon} />
+                        <Image source={require('./../../assets/icons/ic_next_dark.png')} resizeMode='center' style={styles.listClickIcon} />
                         : null 
                     }
             </View>
@@ -38,4 +36,35 @@ class TrackerListItem extends React.Component {
     };
 }
 
+const styles = StyleSheet.create({
+    listItemTrackerStyle:{
+        flex:1,
+        flexDirection: 'row',
+        padding: 10,
+        backgroundColor:'#ffffff',
+        // flexWrap: 'wrap'
+    },
+    listThreeSidedBorderStyle: {
+        borderRightWidth: 1,
+        borderLeftWidth: 1,
+        borderBottomWidth: 1,
+        borderColor: '#EBEBEB',
+    },
+    listItemTrackerTitleStyle: {
+        color: '#404041',
+        fontWeight: 'bold',
+    },
+    listItemTrackerSubTitleStyle: {
+        color: '#404041',
+        fontWeight: 'normal',
+        fontSize: 10
+    },
+    listClickIcon: {
+        width: 25,
+        height: 25,
+        position: 'absolute',
+        right:15,
+        top:15
+    },
+  });
 export default TrackerListItem;

@@ -1,9 +1,8 @@
 import React from "react";
 import { View, Text, FlatList } from "react-native";
 
-import TrackerListItem from "./TrackerListItem";
 
-import globalStyles from '../../themes/global/styles/styles';
+import TrackerListItem from "./TrackerListItem";
 
 class YearListItem extends React.Component {
 
@@ -16,7 +15,7 @@ class YearListItem extends React.Component {
             <View>
                 {
                     this.props.years.year ?
-                        <Text style={globalStyles.listItemYearHeaderStyle}>
+                        <Text style={styles.listItemYearHeaderStyle}>
                             {this.props.years.year.name}
                         </Text> : null
                 }
@@ -29,5 +28,16 @@ class YearListItem extends React.Component {
         );
     }
 }
+
+
+const styles = StyleSheet.create({
+    listItemYearHeaderStyle:{
+        padding: 10,
+        backgroundColor: '#EBEBEB',
+        color: '#2B2D30',
+        fontSize: 14,
+        fontWeight: 'bold'
+    },
+  });
 
 export default YearListItem;

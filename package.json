@@ -1,8 +1,8 @@
 {
-  "name": "react-native-frog-stagelist",
+  "name": "react-native-frog-list-items",
   "version": "1.0.0",
-  "description": "React Native Frog StageList",
-  "main": "StageListItem.js",
+  "description": "React Native Frog List Items",
+  "main": "index.js",
   "scripts": {
     "test": "echo \\\"Error: no test specified\\\" && exit 1"
   },
