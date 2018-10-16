@@ -1,18 +1,19 @@
 import React from "react";
-import { View, Text, TouchableOpacity, Image,StyleSheet } from "react-native";
+import { View, Text, TouchableOpacity, Image, StyleSheet } from "react-native";
 
 class TrackerListItem extends React.Component {
 
     openObjectiveView = () => {
         this.props.navigation.navigate('Objectives', {
             tracker: this.props.tracker,
-            title:  this.props.tracker.subject.name+( this.props.tracker.group ? ' - '+ this.props.tracker.group.name : '' )
+            title:  this.props.tracker.subject.name+( this.props.tracker.group ? ' - '+ this.props.tracker.group.name : '' ),
+            year: this.props.year
         });
     }
 
     render() {
       return (
-        <TouchableOpacity onPress={() => this.openObjectiveView()}>
+        <TouchableOpacity onPress={() => (this.props.tracker.subject.noTracker ? null : this.openObjectiveView())}>
             <View style={[styles.listItemTrackerStyle, styles.listThreeSidedBorderStyle]}>
                 <View>
                     <Text style={styles.listItemTrackerTitleStyle}>
