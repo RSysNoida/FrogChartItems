@@ -37,6 +37,7 @@ class TrackerListItem extends React.Component {
     };
 }
 
+
 const styles = StyleSheet.create({
     listItemTrackerStyle:{
         flex:1,
@@ -54,11 +55,13 @@ const styles = StyleSheet.create({
     listItemTrackerTitleStyle: {
         color: '#404041',
         fontWeight: 'bold',
+        marginRight:40
     },
     listItemTrackerSubTitleStyle: {
         color: '#404041',
         fontWeight: 'normal',
-        fontSize: 10
+        fontSize: 10,
+        marginRight:40
     },
     listClickIcon: {
         width: 25,
@@ -69,3 +72,4 @@ const styles = StyleSheet.create({
     },
   });
 export default TrackerListItem;
+
