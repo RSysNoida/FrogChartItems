@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, FlatList,StyleSheet } from "react-native";
+import { View, Text, FlatList, StyleSheet } from "react-native";
 
 
 import TrackerListItem from "./TrackerListItem";
@@ -7,7 +7,6 @@ import TrackerListItem from "./TrackerListItem";
 class YearListItem extends React.Component {
 
     componentWillReceiveProps(props) {
-
     }
 
     render() {
@@ -22,7 +21,7 @@ class YearListItem extends React.Component {
                 <FlatList
                     data={this.props.years.trackers}
                     keyExtractor={(item, index) => item.subject.uuid + '=' + index}
-                    renderItem={({ item }) => <TrackerListItem tracker={item} navigation={this.props.navigation} />}
+                    renderItem={({ item }) => <TrackerListItem tracker={item} navigation={this.props.navigation} year={this.props.years.year} />}
                 />
             </View>
         );
