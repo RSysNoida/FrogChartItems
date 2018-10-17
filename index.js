@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, FlatList,StyleSheet } from "react-native";
+import { View, Text, FlatList, StyleSheet } from "react-native";
 
 import YearListItem from "./src/listitems/tracker-list/YearListItem";
 
@@ -35,14 +35,16 @@ const styles =  StyleSheet.create({
     listItemDarkHeaderStyle:{
         flex: 1,
         flexDirection: 'row',
-        padding: 10,
-        backgroundColor: '#404041',
+        padding: 5,
+        paddingLeft: 8,
+        backgroundColor: '#4b4b4c',
         borderTopLeftRadius: 5,
         borderTopRightRadius: 5,
+        height: 35
     },
     listItemStageHeaderTextStyle:{
         color: '#ffffff',
-        fontSize: 20,
+        fontSize: 16,
         fontWeight: 'bold',
         flex: 1,
         alignSelf: 'stretch',
