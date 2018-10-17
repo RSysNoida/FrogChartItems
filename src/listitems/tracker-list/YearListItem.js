@@ -11,12 +11,13 @@ class YearListItem extends React.Component {
 
     render() {
         return (
-            <View>
+            <View >
                 {
                     this.props.years.year ?
-                        <Text style={styles.listItemYearHeaderStyle}>
+                        <Text style={styles.listItemYearTextStyle}>
                             {this.props.years.year.name}
-                        </Text> : null
+                        </Text>
+                        : null
                 }
                 <FlatList
                     data={this.props.years.trackers}
@@ -30,12 +31,16 @@ class YearListItem extends React.Component {
 
 
 const styles = StyleSheet.create({
-    listItemYearHeaderStyle:{
-        padding: 10,
+    listItemYearTextStyle:{
         backgroundColor: '#EBEBEB',
-        color: '#2B2D30',
-        fontSize: 14,
-        fontWeight: 'bold'
+        height: 25,
+        color: '#000000',
+        fontSize: 13,
+        paddingLeft: 15,
+        fontFamily: 'Arial',
+        fontWeight: 'bold',
+        textAlign: 'left',
+        textAlignVertical: 'center'
     },
   });
 
