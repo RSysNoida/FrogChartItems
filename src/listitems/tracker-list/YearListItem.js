@@ -14,7 +14,7 @@ class YearListItem extends React.Component {
             <View >
                 {
                     this.props.years.year ?
-                        <Text style={styles.listItemYearTextStyle}>
+                        <Text style={styles.listItemYearTextStyle} numberOfLines={1} ellipsizeMode='tail'>
                             {this.props.years.year.name}
                         </Text>
                         : null
@@ -35,12 +35,17 @@ const styles = StyleSheet.create({
         backgroundColor: '#EBEBEB',
         height: 25,
         color: '#000000',
-        fontSize: 13,
+        fontSize: 12,
         paddingLeft: 15,
         fontFamily: 'Arial',
         fontWeight: 'bold',
         textAlign: 'left',
-        textAlignVertical: 'center'
+        textAlignVertical: 'center',
+        paddingTop: 5,
+        borderRightWidth: 1,
+        borderLeftWidth: 1,
+        borderColor: '#E3E3E3',
+        borderBottomWidth: 1
     },
   });
 
