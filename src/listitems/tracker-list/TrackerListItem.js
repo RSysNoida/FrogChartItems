@@ -16,7 +16,7 @@ class TrackerListItem extends React.Component {
         <TouchableOpacity onPress={() => (this.props.tracker.subject.noTracker ? null : this.openObjectiveView())}>
             <View style={[styles.listItemTrackerStyle, styles.listThreeSidedBorderStyle]}>
                 <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-                    <Text style={styles.listItemTrackerTitleStyle} ellipsizeMode='tail' numberOfLines={1}>
+                    <Text style={[styles.listItemTrackerTitleStyle, (this.props.tracker.subject.noTracker ? {fontSize:16} : null)]} ellipsizeMode='tail' numberOfLines={1}>
                         { this.props.tracker.subject.name}{( this.props.tracker.group ? ' - '+ this.props.tracker.group.name : '' )}
                     </Text>
                     {
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
         borderRightWidth: 1,
         borderLeftWidth: 1,
         borderBottomWidth: 1,
-        borderColor: '#EBEBEB',
+        borderColor: '#E3E3E3',
     },
     listItemTrackerTitleStyle: {
         color: '#000',
@@ -69,7 +69,8 @@ const styles = StyleSheet.create({
         fontWeight: 'normal',
         fontSize: 12,
         alignSelf: 'flex-start',
-        marginRight: 10
+        marginRight: 10,
+        fontFamily: 'Arial'
     },
     listClickIcon: {
         width: 22,
