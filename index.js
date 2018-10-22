@@ -9,8 +9,8 @@ class StageListItem extends React.Component {
       return (
           <View style={[ styles.listItemMargin ]}>
               <View style={styles.listItemDarkHeaderStyle}>
-                  <Text style={styles.listItemStageHeaderTextStyle}>
-                      { this.props.stage.curriculum_type.name }
+                  <Text style={styles.listItemStageHeaderTextStyle} numberOfLines={1} ellipsizeMode='tail'>
+                      { this.props.stage.curriculum_type.name } 
                   </Text>
               </View>
               
@@ -28,9 +28,9 @@ class StageListItem extends React.Component {
 const styles =  StyleSheet.create({
   
     listItemMargin:{
-        marginTop: 15,
-        marginLeft: 15,
-        marginRight: 15,
+        marginTop: 10,
+        marginLeft: 10,
+        marginRight: 10,
     },
     listItemDarkHeaderStyle:{
         flex: 1,
@@ -43,11 +43,14 @@ const styles =  StyleSheet.create({
         height: 35
     },
     listItemStageHeaderTextStyle:{
+        fontFamily: 'Arial',
         color: '#ffffff',
         fontSize: 16,
-        fontWeight: 'bold',
-        flex: 1,
-        alignSelf: 'stretch',
+        fontWeight: '600',
+        // flex: 1,
+         alignSelf: 'center',
+        textAlignVertical:'center',
+      //  backgroundColor:'red'
     }
    
       
