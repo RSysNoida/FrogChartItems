@@ -1,14 +1,13 @@
 import React from "react";
-import { View, Text, FlatList, StyleSheet } from "react-native";
-
-
+import { View, Text, FlatList, StyleSheet, Platform } from "react-native";
+ 
 import TrackerListItem from "./TrackerListItem";
-
+ 
 class YearListItem extends React.Component {
-
+ 
     componentWillReceiveProps(props) {
     }
-
+ 
     render() {
         return (
             <View >
@@ -28,8 +27,7 @@ class YearListItem extends React.Component {
         );
     }
 }
-
-
+ 
 const styles = StyleSheet.create({
     listItemYearTextStyle:{
         backgroundColor: '#EBEBEB',
@@ -41,12 +39,13 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'left',
         textAlignVertical: 'center',
-        paddingTop: 5,
+        paddingTop: Platform.select({android: 0, ios: 5}),
         borderRightWidth: 1,
         borderLeftWidth: 1,
         borderColor: '#E3E3E3',
         borderBottomWidth: 1
     },
   });
-
+ 
 export default YearListItem;
+ 
