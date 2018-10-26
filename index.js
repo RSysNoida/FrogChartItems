@@ -28,7 +28,7 @@ class StageListItem extends React.Component {
 const styles =  StyleSheet.create({
   
     listItemMargin:{
-        marginTop: 10,
+        marginBottom: 10,
         marginLeft: 10,
         marginRight: 10,
     },
